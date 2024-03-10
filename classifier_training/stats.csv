@@ -1,0 +1,3 @@
+,model,best_score,best_params
+0,naive_bayes,0.896875,{'priors': None}
+1,logistic_regression,0.871875,"{'penalty': 'l1', 'solver': 'saga'}"
