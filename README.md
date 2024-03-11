@@ -2,11 +2,14 @@
 
 This project aims to predict whether a user will click on an advertisement based on their age and annual salary. The project includes data collection, model training for prediction, creation of a FastAPI api for predictions, containerizing the api using Docker, and testing the Docker container.
 
+https://github.com/umairsiddique3171/ad_click_prediction_dockerized_api/assets/148565997/3cbfed41-181e-41ca-ba0d-a13afc09a470
+
 ## Table of Contents
  - [Overview](#overview)
  - [Model Training](#model-training)
  - [Creation of FastAPI API](#creation-of-fastapi-api)
  - [Containerization of API](#containerization-of-api)
+ - [Notes](#notes)
  - [License](#license)
 
 ## Overview
@@ -43,8 +46,8 @@ This project is structured into four key phases, each playing a vital role in de
     1. Clone the repository:
 
         ```
-        git clone https://github.com/your_username/ad_click_prediction.git
-        cd ad_click_prediction/app
+        git clone https://github.com/umairsiddique3171/ad_click_prediction_dockerized_api.git
+        cd ad_click_prediction_dockerized_api/app
         ```
 
     2. Create and activate a virtual environment:
@@ -63,10 +66,11 @@ This project is structured into four key phases, each playing a vital role in de
     4. Run the FastAPI app:
 
         ```
-        uvicorn main:app --reload
+        uvicorn main:app 
         ```
 
-    5. Access the app in your browser at `http://localhost:8000`.
+    5. Access the api in your browser at `http://localhost:8000/docs`.
+    6. You can also use predict.py to post the input to api and get classification and it's score as a response.
 
 ## Containerization of API
 - **Docker Setup:**
@@ -79,7 +83,7 @@ This project is structured into four key phases, each playing a vital role in de
 
 - **Dockerfile Setup:**
 
-    Setup "Dockerfile" as mentioned [here]().
+    Setup "Dockerfile" as mentioned [here](https://github.com/umairsiddique3171/ad_click_prediction_dockerized_api/blob/main/app/Dockerfile).
 
 - **Build Docker Image:**
 
@@ -138,8 +142,21 @@ This project is structured into four key phases, each playing a vital role in de
         ```
         This command will push the tagged image to your Docker Hub repository. Make sure you have appropriate permissions to push to the repository.
 
+## Notes
+
+- APIs are moved around through various means, including:
+   - Deployment Platforms: APIs can be deployed on cloud platforms like AWS, Google Cloud, or Azure, where they can be easily accessed and managed.
+   - Containerization: APIs are often packaged into containers using technologies like Docker, allowing for easy movement across different environments with consistent behavior.
+   - Version Control Systems: APIs are managed and versioned using version control systems like Git, enabling tracking of changes and collaboration among developers.
+   - API Gateways: API gateways serve as intermediaries between clients and APIs, allowing for routing, load balancing, and management of API requests across different services and environments.
+   - Package Managers: APIs and their dependencies can be packaged and distributed using package managers like npm (for Node.js) or pip (for Python), facilitating easy installation and usage.
+   - Deployment Pipelines: APIs are moved through deployment pipelines, where automated processes handle tasks like testing, building, and deploying to different environments such as development, staging, and production.
+
+- An API (Application Programming Interface) is not an app (application). An API is a set of rules and protocols that allows different software applications to communicate with each other. It defines how different software components should interact, specifying the methods and data formats that can be used. An app, on the other hand, refers to a standalone software application designed to perform specific tasks or functions for end-users. While apps may utilize APIs to interact with other software systems or services, they are distinct entities.
+
+
 ## License
-This project is licensed under the [MIT License]().
+This project is licensed under the [MIT License](https://github.com/umairsiddique3171/ad_click_prediction_dockerized_api/blob/main/LICENSE).
 
 ## Author 
-[@umairsiddique3171]()
+[@umairsiddique3171](https://github.com/umairsiddique3171)
