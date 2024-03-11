@@ -17,7 +17,7 @@ scaler = load_model('min_max_scaler_model.p')
 model = load_model('logistic_regression_model.p')
 
 @app.post('/ad_click_prediction')
-def diabetes_pred(input_parameters : model_input):
+def ad_click_pred(input_parameters : model_input):
 
     age = input_parameters.age
     annual_salary = input_parameters.annual_salary
